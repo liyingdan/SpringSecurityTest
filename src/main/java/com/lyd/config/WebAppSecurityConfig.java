@@ -53,6 +53,7 @@ public class WebAppSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()               //除了antMatchers()匹配的其他请求
                 .authenticated()           //需要认证才可以访问
                 .and()
+
                 .formLogin()          // 指定使用表单作为登录方式
                 .loginPage("/index.jsp")  //指定登录页地址
                 .permitAll()
